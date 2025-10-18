@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SmartRent.Interfaces;
 using SmartRent.Models;
 
@@ -15,6 +16,7 @@ namespace SmartRent.Controllers
             _userService = userService;
         }
 
+        // ========== CRUD ==========
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -48,6 +50,16 @@ namespace SmartRent.Controllers
         {
             var deleted = await _userService.DeleteAsync(id);
             return deleted ? NoContent() : NotFound();
+        }
+
+        // ========== AUTH ==========
+        [HttpPost("register")]
+        public async Task<IActionResult> Register(User user, string password)
+        {
+            var result = await _userService.RegisterAsync(user, password);
+            if (result == null)
+                return BadRequest("Email already exists.");
+            return Ok(result);
         }
     }
 }
