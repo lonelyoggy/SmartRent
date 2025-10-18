@@ -41,7 +41,7 @@ namespace SmartRent.Services
             return existing;
         }
 
-        public async Task<bool?> DeleteAsync(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
             var existing = await _context.Bookings.FindAsync(id);
             if (existing == null) return false;

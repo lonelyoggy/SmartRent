@@ -61,5 +61,14 @@ namespace SmartRent.Controllers
                 return BadRequest("Email already exists.");
             return Ok(result);
         }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(string email, string password)
+        {
+            var token = await _userService.LoginAsync(email, password);
+            if (token == null)
+                return Unauthorized("Invalid email or password.");
+            return Ok(new { token });
+        }
     }
 }
