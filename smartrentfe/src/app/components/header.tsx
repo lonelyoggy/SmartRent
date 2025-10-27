@@ -12,7 +12,7 @@ export default function Header() {
       {tickerVisible && (
         <div className="border-b border-gray-800 relative">
           <Image
-            src="/images/Group.jpg"
+            src="/images/Home/Group.jpg"
             alt="background pattern"
             fill
             className="object-cover opacity-50"
@@ -43,11 +43,17 @@ export default function Header() {
       {/* Main Navigation */}
       <nav className="bg-[#0f0f1e] border-b border-gray-800">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-23">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">E</span>
+            <Link href="/" className="flex items-center group">
+              <div className="w-40 h-20 rounded-lg flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/images/Home/Logo.jpg"
+                  alt="Estatein Logo"
+                  width={160}
+                  height={160}
+                  className="object-contain"
+                />
               </div>
               <span className="text-white font-semibold text-xl group-hover:text-purple-400 transition-colors">
                 Estatein
