@@ -177,6 +177,199 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Featured Properties Section */}
+      <section className="py-20 bg-[#0a0a0f]">
+        <div className="container mx-auto px-4">
+          {/* Section Header */}
+          <div className="flex justify-between items-start mb-12">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-yellow-500 text-2xl">✨</span>
+              </div>
+              <h2 className="text-4xl font-bold mb-4">Featured Properties</h2>
+              <p className="text-gray-400 max-w-2xl">
+                Explore our handpicked selection of featured properties. Each
+                listing offers a glimpse into exceptional homes and investments
+                available through Estatein. Click "View Details" for more
+                information
+              </p>
+            </div>
+            <button className="px-6 py-3 border border-gray-700 rounded-lg hover:bg-[#1a1a2e] transition-all whitespace-nowrap">
+              View All Properties
+            </button>
+          </div>
+
+          {/* Properties Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {/* Property Card 1 */}
+            <div className="bg-[#1a1a2e] border border-gray-800 rounded-lg overflow-hidden hover:border-purple-600 transition-all">
+              <div className="relative h-64">
+                <Image
+                  src="/images/Home/property1.jpg"
+                  alt="Seaside Serenity Villa"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">
+                  Seaside Serenity Villa
+                </h3>
+                <p className="text-gray-400 text-sm mb-4">
+                  A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban
+                  neighborhood.{" "}
+                  <span className="text-purple-600 cursor-pointer">
+                    Read More
+                  </span>
+                </p>
+
+                {/* Property Details */}
+                <div className="flex gap-4 mb-6 pb-6 border-b border-gray-700">
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span>🛏️</span>
+                    <span>4-Bedroom</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span>🚿</span>
+                    <span>3-Bathroom</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span>🏠</span>
+                    <span>Villa</span>
+                  </div>
+                </div>
+
+                {/* Price and CTA */}
+                <div className="flex justify-between items-center">
+                  <div>
+                    <p className="text-gray-400 text-sm">Price</p>
+                    <p className="text-xl font-bold">$550,000</p>
+                  </div>
+                  <button className="px-6 py-3 bg-purple-600 rounded-lg hover:bg-purple-700 transition-all">
+                    View Property Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Property Card 2 */}
+            <div className="bg-[#1a1a2e] border border-gray-800 rounded-lg overflow-hidden hover:border-purple-600 transition-all">
+              <div className="relative h-64">
+                <Image
+                  src="/images/Home/property2.jpg"
+                  alt="Metropolitan Haven"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">
+                  Metropolitan Haven
+                </h3>
+                <p className="text-gray-400 text-sm mb-4">
+                  A chic and fully-furnished 2-bedroom apartment with panoramic
+                  city views.{" "}
+                  <span className="text-purple-600 cursor-pointer">
+                    Read More
+                  </span>
+                </p>
+
+                {/* Property Details */}
+                <div className="flex gap-4 mb-6 pb-6 border-b border-gray-700">
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span>🛏️</span>
+                    <span>2-Bedroom</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span>🚿</span>
+                    <span>2-Bathroom</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span>🏠</span>
+                    <span>Villa</span>
+                  </div>
+                </div>
+
+                {/* Price and CTA */}
+                <div className="flex justify-between items-center">
+                  <div>
+                    <p className="text-gray-400 text-sm">Price</p>
+                    <p className="text-xl font-bold">$550,000</p>
+                  </div>
+                  <button className="px-6 py-3 bg-purple-600 rounded-lg hover:bg-purple-700 transition-all">
+                    View Property Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Property Card 3 */}
+            <div className="bg-[#1a1a2e] border border-gray-800 rounded-lg overflow-hidden hover:border-purple-600 transition-all">
+              <div className="relative h-64">
+                <Image
+                  src="/images/Home/property3.jpg"
+                  alt="Rustic Retreat Cottage"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">
+                  Rustic Retreat Cottage
+                </h3>
+                <p className="text-gray-400 text-sm mb-4">
+                  An elegant 3-bedroom, 2.5-bathroom townhouse in a gated
+                  community.{" "}
+                  <span className="text-purple-600 cursor-pointer">
+                    Read More
+                  </span>
+                </p>
+
+                {/* Property Details */}
+                <div className="flex gap-4 mb-6 pb-6 border-b border-gray-700">
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span>🛏️</span>
+                    <span>3-Bedroom</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span>🚿</span>
+                    <span>3-Bathroom</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span>🏠</span>
+                    <span>Villa</span>
+                  </div>
+                </div>
+
+                {/* Price and CTA */}
+                <div className="flex justify-between items-center">
+                  <div>
+                    <p className="text-gray-400 text-sm">Price</p>
+                    <p className="text-xl font-bold">$550,000</p>
+                  </div>
+                  <button className="px-6 py-3 bg-purple-600 rounded-lg hover:bg-purple-700 transition-all">
+                    View Property Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Pagination */}
+          <div className="flex justify-between items-center">
+            <p className="text-gray-400">01 of 60</p>
+            <div className="flex gap-4">
+              <button className="w-12 h-12 border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#1a1a2e] transition-all">
+                <ArrowUpRight className="w-5 h-5 rotate-180" />
+              </button>
+              <button className="w-12 h-12 border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#1a1a2e] transition-all">
+                <ArrowUpRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
