@@ -23,7 +23,7 @@ export default function Header() {
               <span className="text-yellow-400">✨</span>
               <span>Discover Your Dream Property with Estatein</span>
               <Link
-                href="#" 
+                href="#"
                 className="text-white underline hover:text-gray-300 transition-colors ml-1"
               >
                 Learn More
@@ -33,8 +33,8 @@ export default function Header() {
               onClick={() => setTickerVisible(false)}
               className="absolute right-4 text-gray-400 hover:text-white transition-colors text-xl z-20"
               aria-label="Close banner"
-              >
-                x
+            >
+              x
             </button>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function Header() {
             </Link>
 
             {/* Center Navigation Links */}
-            <div className="hidden md:flex items-center gap-2.5">
+            <div className="hidden md:flex items-center gap-10">
               <Link
                 href="/home"
                 className="px-6 py-2.5 text-white bg-[#1a1a2e] rounded-lg hover:bg-[#252538] transition-colors"
@@ -88,8 +88,6 @@ export default function Header() {
               </Link>
             </div>
 
-
-
             {/* Contact Button */}
             <Link
               href="/contact"
@@ -99,12 +97,10 @@ export default function Header() {
             </Link>
 
             {/* Mobile Menu Button */}
-            <button className="md:hidden text-white text-2xl">
-              ☰
-            </button>
+            <button className="md:hidden text-white text-2xl">☰</button>
           </div>
         </div>
       </nav>
     </header>
-  )
+  );
 }
