@@ -7,6 +7,9 @@ import { TiHome } from "react-icons/ti";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { TbBuildings } from "react-icons/tb";
 import { IoSunnySharp } from "react-icons/io5";
+import { PiStarFour } from "react-icons/pi";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function HomePage() {
   return (
@@ -112,7 +115,7 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-[#0f0f1e]">
+      <section className="py-5 bg-[#0f0f1e]">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {/* Feature Card 1 */}
@@ -185,7 +188,9 @@ export default function HomePage() {
           <div className="flex justify-between items-start mb-12">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <span className="text-yellow-500 text-2xl">✨</span>
+                <PiStarFour className="text-yellow-100 text-3xl opacity-70" />
+                <PiStarFour className="text-yellow-100 text-2xl opacity-50" />
+                <PiStarFour className="text-yellow-100 text-1xl opacity-30" />
               </div>
               <h2 className="text-4xl font-bold mb-4">Featured Properties</h2>
               <p className="text-gray-400 max-w-2xl">
@@ -195,7 +200,7 @@ export default function HomePage() {
                 information
               </p>
             </div>
-            <button className="px-6 py-3 border border-gray-700 rounded-lg hover:bg-[#1a1a2e] transition-all whitespace-nowrap">
+            <button className="px-6 py-3 mt-11 border border-gray-700 rounded-lg hover:bg-[#1a1a2e] transition-all whitespace-nowrap">
               View All Properties
             </button>
           </div>
@@ -204,9 +209,9 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {/* Property Card 1 */}
             <div className="bg-[#1a1a2e] border border-gray-800 rounded-lg overflow-hidden hover:border-purple-600 transition-all">
-              <div className="relative h-64">
+              <div className="relative h-72">
                 <Image
-                  src="/images/Home/property1.jpg"
+                  src="/images/Home/property1.png"
                   alt="Seaside Serenity Villa"
                   fill
                   className="object-cover"
@@ -255,9 +260,9 @@ export default function HomePage() {
 
             {/* Property Card 2 */}
             <div className="bg-[#1a1a2e] border border-gray-800 rounded-lg overflow-hidden hover:border-purple-600 transition-all">
-              <div className="relative h-64">
+              <div className="relative h-72">
                 <Image
-                  src="/images/Home/property2.jpg"
+                  src="/images/Home/property2.png"
                   alt="Metropolitan Haven"
                   fill
                   className="object-cover"
@@ -306,9 +311,9 @@ export default function HomePage() {
 
             {/* Property Card 3 */}
             <div className="bg-[#1a1a2e] border border-gray-800 rounded-lg overflow-hidden hover:border-purple-600 transition-all">
-              <div className="relative h-64">
+              <div className="relative h-72">
                 <Image
-                  src="/images/Home/property3.jpg"
+                  src="/images/Home/property3.png"
                   alt="Rustic Retreat Cottage"
                   fill
                   className="object-cover"
@@ -356,15 +361,174 @@ export default function HomePage() {
             </div>
           </div>
 
+          {/* Divider Line */}
+          <div className="border-t border-gray-800 mb-4"></div>
+
           {/* Pagination */}
           <div className="flex justify-between items-center">
             <p className="text-gray-400">01 of 60</p>
             <div className="flex gap-4">
               <button className="w-12 h-12 border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#1a1a2e] transition-all">
-                <ArrowUpRight className="w-5 h-5 rotate-180" />
+                <FaArrowLeftLong className="w-5 h-5" />
               </button>
               <button className="w-12 h-12 border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#1a1a2e] transition-all">
-                <ArrowUpRight className="w-5 h-5" />
+                <FaArrowRightLong className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-[#0f0f1e]">
+        <div className="container mx-auto px-4">
+          {/* Section Header */}
+          <div className="flex justify-between items-start mb-12">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <PiStarFour className="text-yellow-100 text-3xl opacity-70" />
+                <PiStarFour className="text-yellow-100 text-2xl opacity-50" />
+                <PiStarFour className="text-yellow-100 text-1xl opacity-30" />
+              </div>
+              <h2 className="text-4xl font-bold mb-4">What Our Clients Say</h2>
+              <p className="text-gray-400 max-w-2xl">
+                Read the success stories and heartfelt testimonials from our
+                valued clients. Discover why they chose Estatein for their real
+                estate needs.
+              </p>
+            </div>
+            <button className="px-6 py-3 mt-10 border border-gray-700 rounded-lg hover:bg-[#1a1a2e] transition-all whitespace-nowrap">
+              View All Feedbacks
+            </button>
+          </div>
+
+          {/* Testimonials Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {/* Testimonial Card 1 */}
+            <div className="bg-[#1a1a2e] border border-gray-800 rounded-lg p-8 hover:border-purple-600 transition-all">
+              {/* Star Rating */}
+              <div className="flex gap-1 mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-500 text-xl">
+                    ⭐
+                  </span>
+                ))}
+              </div>
+
+              <h3 className="text-xl font-semibold mb-4">
+                Exceptional Service!
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Our experience with Estatein was outstanding. Their team's
+                dedication and professionalism made finding our dream home a
+                breeze. Highly recommended!
+              </p>
+
+              {/* Client Info */}
+              <div className="flex items-center gap-4 pt-6 border-t border-gray-700">
+                <div className="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center overflow-hidden">
+                  <Image
+                    src="/images/Home/client1.jpg"
+                    alt="Wade Warren"
+                    width={48}
+                    height={48}
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Wade Warren</p>
+                  <p className="text-gray-400 text-sm">USA, California</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial Card 2 */}
+            <div className="bg-[#1a1a2e] border border-gray-800 rounded-lg p-8 hover:border-purple-600 transition-all">
+              {/* Star Rating */}
+              <div className="flex gap-1 mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-500 text-xl">
+                    ⭐
+                  </span>
+                ))}
+              </div>
+
+              <h3 className="text-xl font-semibold mb-4">
+                Efficient and Reliable
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Estatein provided us with top-notch service. They helped us sell
+                our property quickly and at a great price. We couldn't be
+                happier with the results.
+              </p>
+
+              {/* Client Info */}
+              <div className="flex items-center gap-4 pt-6 border-t border-gray-700">
+                <div className="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center overflow-hidden">
+                  <Image
+                    src="/images/Home/client2.jpg"
+                    alt="Emelie Thomson"
+                    width={48}
+                    height={48}
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">Emelie Thomson</p>
+                  <p className="text-gray-400 text-sm">USA, Florida</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial Card 3 */}
+            <div className="bg-[#1a1a2e] border border-gray-800 rounded-lg p-8 hover:border-purple-600 transition-all">
+              {/* Star Rating */}
+              <div className="flex gap-1 mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-500 text-xl">
+                    ⭐
+                  </span>
+                ))}
+              </div>
+
+              <h3 className="text-xl font-semibold mb-4">Trusted Advisors</h3>
+              <p className="text-gray-400 mb-6">
+                The Estatein team guided us through the entire buying process.
+                Their knowledge and commitment to our needs were impressive.
+                Thank you for your support!
+              </p>
+
+              {/* Client Info */}
+              <div className="flex items-center gap-4 pt-6 border-t border-gray-700">
+                <div className="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center overflow-hidden">
+                  <Image
+                    src="/images/Home/client3.jpg"
+                    alt="John Mans"
+                    width={48}
+                    height={48}
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold">John Mans</p>
+                  <p className="text-gray-400 text-sm">USA, Nevada</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Divider Line */}
+          <div className="border-t border-gray-800 mb-8"></div>
+
+          {/* Pagination */}
+          <div className="flex justify-between items-center">
+            <p className="text-gray-400">01 of 10</p>
+            <div className="flex gap-4">
+              <button className="w-12 h-12 border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#1a1a2e] transition-all">
+                <FaArrowLeftLong className="w-5 h-5" />
+              </button>
+              <button className="w-12 h-12 border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#1a1a2e] transition-all">
+                <FaArrowRightLong className="w-5 h-5" />
               </button>
             </div>
           </div>
