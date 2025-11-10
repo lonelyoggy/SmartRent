@@ -46,18 +46,18 @@ export default function Footer() {
       </section>
 
       {/* Main Footer */}
-      <div className="container ml-50 px-4 py-16">
-        <div className="flex justify-center mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-4 max-w-8xl w-full">
+      <div className="w-full px-4 py-16">
+        <div className="flex justify-center mb-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-4 max-w-7xl w-full">
             {/* Brand Column */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 ml-[-50]">
               <div className="flex items-center mb-[-10] mt-[-40]">
                 <div className="w-50 h-50 rounded-lg flex items-center justify-center overflow-hidden relative">
                   <Image
                     src="/images/Home/Logo.jpg"
                     alt="Estatein Logo"
                     fill
-                    className="object-cover"
+                    className="object-cover ml-5"
                   />
                 </div>
                 <span className="text-xl font-bold">Estatein</span>
@@ -68,9 +68,9 @@ export default function Footer() {
                 <input
                   type="email"
                   placeholder="Enter Your Email"
-                  className="w-88 bg-[#1a1a2e] border border-gray-800 rounded-xl px-4 py-3 pr-12 focus:outline-none focus:border-purple-600 transition-colors"
+                  className="w-88 bg-[#1a1a2e] mt-[-20] border border-gray-800 rounded-xl px-4 py-3 pr-12 focus:outline-none focus:border-purple-600 transition-colors"
                 />
-                <button className="absolute right-18 top-1/2 -translate-y-1/2 w-8 h-8 bg-purple-600 rounded-xl flex items-center justify-center hover:bg-purple-700 transition-all">
+                <button className="absolute right-15 mt-[-7] top-1/2 -translate-y-1/2 w-8 h-8 bg-purple-600 rounded-xl flex items-center justify-center hover:bg-purple-700 transition-all">
                   <IoSend className="w-4 h-4" />
                 </button>
               </div>
